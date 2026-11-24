@@ -1,0 +1,3 @@
+gcc -std=c11 -Wall -Wextra -pedantic -g -fsanitize=address,undefined main.c order.c queue.c stack.c sim.c -o qs_san
+./qs_san > /dev/null && echo "ASan/UBSan: clean run, no leaks reported"
+ASan/UBSan: clean run, no leaks reported
